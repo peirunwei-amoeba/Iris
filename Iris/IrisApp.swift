@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct IrisApp: App {
@@ -13,5 +14,6 @@ struct IrisApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Conversation.self, Message.self])
     }
 }
